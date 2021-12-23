@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: kibana
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 5601
     targetPort: 5601
-    nodePort: 31501
   selector:
     app: kibana
